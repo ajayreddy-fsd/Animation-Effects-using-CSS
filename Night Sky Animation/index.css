@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #203060, #584880, #885090, #f880b0, #f8c0d8);
+}
+
+.star{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+.star-1{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+.star-2{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+
+/* !below is the actual code */
+/* !below is the actual code */
+/* !below is the actual code */
+@keyframes shine {
+    50%{
+        transform: scale(1.5);
+    }
+}
+
+.star-1{
+    animation: shine 2s linear infinite;
+}
+
+.star-2{
+    animation: shine 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}

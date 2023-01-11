@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heart{
+    width: 100px;
+    height: 100px;
+    background-color: #d51d48;
+    
+    /* below code is to place this 
+    heart at the center of view-port */
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.heart::before{
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+.heart::after{
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+
+/* below is the actual code */
+.heart{
+    transform: rotateZ(45deg);
+    background-color: #d51d48;
+    animation: beat 2s infinite;
+}
+
+.heart::before{
+    right: 50px;
+    background-color: #d51d48;
+}
+
+.heart::after{
+    bottom: 50px;
+    background-color: #d51d48;
+}
+
+@keyframes beat {
+    
+    50%{
+        transform: scale(0.7) rotate(45deg);
+    }
+}
+
